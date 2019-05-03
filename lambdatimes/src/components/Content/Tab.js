@@ -13,7 +13,7 @@ const Tab = props => {
       props.tab===props.selectedTab ?<Tab className='tab active-tab'/>: <Tab className='tab'/>
       // props.tab===props.selectedTab ?console.log(props.tab + true + props.selectedTab): console.log(props.tab + false + props.selectedTab)
       const selectTabHandler = event => {event.preventDefault(), props.selectTabHandler(props.tab)}
-      console.log(props.tab.className === 'active-tab')
+      // console.log(props.tab.className === 'active-tab')
 
   return (
     <div
