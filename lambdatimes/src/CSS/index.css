@@ -183,9 +183,8 @@ body {
   }
 }
 .tabs .topics {
-  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: none;
   align-items: center;
   flex-direction: row;
   /* border: 1px solid red; */
