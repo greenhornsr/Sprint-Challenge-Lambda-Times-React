@@ -11,9 +11,9 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
       // const myClassName = props.tab===props.selectedTab ?<div className='tab active-tab'/>: <div className='tab'/>
-      const myClassName = props.tab===props.selectedTab ? 'tab active-tab': 'tab'
       // props.tab===props.selectedTab ?console.log(props.tab + true + props.selectedTab): console.log(props.tab + false + props.selectedTab)
-      const selectTabHandler = event => {event.preventDefault(), props.selectTabHandler(props.tab)}
+      const myClassName = props.tab===props.selectedTab ? 'tab active-tab': 'tab'
+      const selectTabHandler = () => {props.selectTabHandler(props.tab)}
       // console.log(props.tab.className === 'active-tab')
 
   return (
@@ -32,7 +32,7 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 Tab.propTypes = {
-  tab: PropTypes.string,
+  tab: PropTypes.string.isRequired,
   // selectedTab: PropTypes.string,
   // selectTabHandler: PropTypes.func,
 }
