@@ -2,11 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 const Tab = props => {
+  // console.log(props)
+  // console.log(props.tab)
+  // console.log(props.tab)
+  // console.log(props.selectedTab)
+  // console.log(props.selectTabHandler)
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-      props.tab===props.selectedTab ?props.tab.className.toggle('active-tab'):props.tab
+      props.tab===props.selectedTab ?<Tab className='tab active-tab'/>: <Tab className='tab'/>
+      // props.tab===props.selectedTab ?console.log(props.tab + true + props.selectedTab): console.log(props.tab + false + props.selectedTab)
       const selectTabHandler = event => {event.preventDefault(), props.selectTabHandler(props.tab)}
+      console.log(props.tab.className === 'active-tab')
 
   return (
     <div
@@ -24,9 +31,9 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 Tab.propTypes = {
-  tab: PropTypes.string.isRequired,
-  selectedTab: PropTypes.string,
-  selectTabHandler: PropTypes.func,
+  // tab: PropTypes.string.isRequired,
+  // selectedTab: PropTypes.string,
+  // selectTabHandler: PropTypes.func,
 }
 
 

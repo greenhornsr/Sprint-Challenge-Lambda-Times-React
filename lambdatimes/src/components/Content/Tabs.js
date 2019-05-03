@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 const Tabs = props => {
   // console.log(props.tabs)
   // console.log(props.selectedTab)
+  // console.log(props.selectTabHandler)
   return (
     <div className="tabs">
       <div className="topics">
@@ -13,7 +14,7 @@ const Tabs = props => {
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
             {props.tabs.map(tab => (
               // console.log(tab),
-            <Tab tab={tab} selectTabHandler={props.changeSelected} selectedTab={props.selected} key={tab} />
+            <Tab tab={tab} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab} key={tab} />
               ))}
       </div>
     </div>
