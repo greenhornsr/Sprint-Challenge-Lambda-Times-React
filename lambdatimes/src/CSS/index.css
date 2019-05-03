@@ -174,6 +174,8 @@ body {
   width: 100%;
   height: 47px;
   background-color: #fff;
+  /* border: 1px solid red; */
+
 }
 @media (min-width: 1280px) {
   .tabs {
@@ -181,10 +183,13 @@ body {
   }
 }
 .tabs .topics {
+  width: 100%;
   display: flex;
-  justify-content: none;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
+  /* border: 1px solid red; */
+
 }
 .tabs .topics .title {
   font-size: 12px;
